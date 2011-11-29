@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>1129 II Niku Kyu </title>
+<script>//<![CDATA[
+
+function draw() {
+	var canvas = document.getElementById("canvas1");
+	var c = canvas.getContext("2d");
+
+	//手の平
+	var rx = 100;
+	var ry = 200;
+	var r = 80;
+	var rgrad = c.createRadialGradient(rx-10, ry-10, 5, rx, ry, r+5);
+	rgrad.addColorStop(0, '#ffeeff');
+	rgrad.addColorStop(0.8, '#ff66ff');
+	rgrad.addColorStop(1, '#ff99ff');
+	c.shadowColor = "#666666"; //firefox は必須
+	c.shadowBlur = 5;
+	c.shadowOffsetX = 4;
+	c.shadowOffsetY = 3;
+	c.beginPath();
+	c.fillStyle = rgrad;
+	c.arc(rx, ry, r, 0, Math.PI*2,false);
+	c.fill();
+
+	//指1
+	var rx = 50;
+	var ry = 70;
+	var r = 40;
+	var rgrad = c.createRadialGradient(rx-10, ry-10, 5, rx, ry, r+5);
+	rgrad.addColorStop(0, '#ffeeff');
+	rgrad.addColorStop(0.8, '#ff66ff');
+	rgrad.addColorStop(1, '#ff99ff');
+	c.shadowColor = "#666666"; //firefox は必須
+	c.shadowBlur = 5;
+	c.shadowOffsetX = 4;
+	c.shadowOffsetY = 3;
+	c.beginPath();
+	c.fillStyle = rgrad;
+	c.arc(rx, ry, r, 0, Math.PI*2,false);
+	c.fill();
+
+	//指2
+	var rx = 150;
+	var ry = 60;
+	var r = 40;
+	var rgrad = c.createRadialGradient(rx-10, ry-10, 5, rx, ry, r+5);
+	rgrad.addColorStop(0, '#ffeeff');
+	rgrad.addColorStop(0.8, '#ff66ff');
+	rgrad.addColorStop(1, '#ff99ff');
+	c.shadowColor = "#666666"; //firefox は必須
+	c.shadowBlur = 5;
+	c.shadowOffsetX = 4;
+	c.shadowOffsetY = 3;
+	c.beginPath();
+	c.fillStyle = rgrad;
+	c.arc(rx, ry, r, 0, Math.PI*2,false);
+	c.fill();
+
+	//指3
+	var rx = 240;
+	var ry = 150;
+	var r = 40;
+	var rgrad = c.createRadialGradient(rx-10, ry-10, 5, rx, ry, r+5);
+	rgrad.addColorStop(0, '#ffeeff');
+	rgrad.addColorStop(0.8, '#ff66ff');
+	rgrad.addColorStop(1, '#ff99ff');
+	c.shadowColor = "#666666"; //firefox は必須
+	c.shadowBlur = 5;
+	c.shadowOffsetX = 4;
+	c.shadowOffsetY = 3;
+	c.beginPath();
+	c.fillStyle = rgrad;
+	c.arc(rx, ry, r, 0, Math.PI*2,false);
+	c.fill();
+
+	//指4
+	var rx = 230;
+	var ry = 250;
+	var r = 40;
+	var rgrad = c.createRadialGradient(rx-10, ry-10, 5, rx, ry, r+5);
+	rgrad.addColorStop(0, '#ffeeff');
+	rgrad.addColorStop(0.8, '#ff66ff');
+	rgrad.addColorStop(1, '#ff99ff');
+	c.shadowColor = "#666666"; //firefox は必須
+	c.shadowBlur = 5;
+	c.shadowOffsetX = 4;
+	c.shadowOffsetY = 3;
+	c.beginPath();
+	c.fillStyle = rgrad;
+	c.arc(rx, ry, r, 0, Math.PI*2,false);
+	c.fill();
+
+}
+
+//]]></script>
+<style>
+body { background-color:#cccccc; }
+canvas { background-color:#ffffff; }
+</style>
+</head>
+<body onload="draw()">
+<canvas id="canvas1" width="300" height="300"></canvas>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>1129 II Niku Kyu </title>
+<script>//<![CDATA[
+
+function draw() {
+	var canvas = document.getElementById("canvas1");
+	var c = canvas.getContext("2d");
+
+	//ボール
+	var rx = 220;
+	var ry = 240;
+	var r = 35;
+	var rgrad = c.createRadialGradient(rx-10, ry-10, 5, rx, ry, r+5);
+	rgrad.addColorStop(0, '#ffeeee');
+	rgrad.addColorStop(0.8, '#ff6600');
+	rgrad.addColorStop(1, '#ff9933');
+	c.shadowColor = "#666666"; //firefox は必須
+	c.shadowBlur = 5;
+	c.shadowOffsetX = 4;
+	c.shadowOffsetY = 3;
+	c.beginPath();
+	c.fillStyle = rgrad;
+	c.arc(rx, ry, r, 0, Math.PI*2,false);
+	c.fill();
+}
+
+//]]></script>
+<style>
+body { background-color:#cccccc; }
+canvas { background-color:#ffffff; }
+</style>
+</head>
+<body onload="draw()">
+<canvas id="canvas1" width="300" height="300"></canvas>
+</body>
+</html>
